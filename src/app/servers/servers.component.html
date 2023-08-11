@@ -1,4 +1,20 @@
 <h2>ServersComponent</h2>
 
+<h4>Property Binding</h4>
+<p>Passing data with Event Binding <input type="text" class="form-control" (input)="onUpdateServerName($event)"></p>
+<!-- <p>{{ serverName }}</p> -->
+
+<p>Two-way-binding <input type="text" class="form-control" [(ngModel)]="serverName"></p>
+<!-- <p>{{ serverName }}</p> -->
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+
+<p class="mt-5 p-2">String Interpolation to Property Binding</p>
+<p>String Interpolation: {{allowNewServer}}</p>
+<p>Property Binding: <span [innerHTML]="allowNewServer"></span></p>
+
+<p class="text-danger">{{ serverCreationStatus }}</p>
+
+<hr>
 <app-server></app-server>
 <app-server></app-server>

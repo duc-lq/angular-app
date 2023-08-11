@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './alert/successAlert/successAlert.component';
 import { WarningAlertComponent } from './alert/warningAlert/warningAlert.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { WarningAlertComponent } from './alert/warningAlert/warningAlert.compone
     WarningAlertComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    // FormsModule for Two-way-binding to work
   ],
   providers: [],
   bootstrap: [AppComponent]
