@@ -3,7 +3,12 @@
 <app-warning-alert></app-warning-alert>
 
 <h4>String Interpolation</h4>
-<p>Server with ID {{serverId}} is {{getServerStatus()}}</p>
+
+<p>Server with ID {{serverId}} is 
+    <span [ngStyle]="{backgroundColor : getServerStatusColor()}" [ngClass]="{online : serverStatus =='online'}">
+        {{getServerStatus()}}
+    </span>
+</p>
 
 
 
